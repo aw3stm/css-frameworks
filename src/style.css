@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand: #8f8b87;
+  --color-input-bg: #f1f1f1;
+  --color-input-border: #cccbc8;
+  --text-mobile: 1rem;
+  --text-desktop: 1.5rem;
+  --color-main-text: #fff;
+  --color-brand-pink: #deb6b2;
+  --color-pink-hover: #c8aaa6;
+  --color-green-hover: #97b1a6;
+  --text-pink-text: #8f8b87;
+  --color-nav-bg: #75706b;
+}

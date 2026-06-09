@@ -31,4 +31,53 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("flex");
     });
   }
+  // ========================================
+  // CREATE POST
+  // ========================================
+  const createBtn = document.getElementById("create-btn");
+  const desktopCreateBtn = document.getElementById("desktop-create-btn");
+  const closeCreatePost = document.getElementById("close-create-post");
+  const createPost = document.getElementById("create-post");
+
+  if (closeCreatePost && createPost) {
+    const openCreate = () => {
+      createPost.classList.remove("hidden");
+      createPost.classList.add("flex");
+    };
+    if (createBtn) {
+      createBtn.addEventListener("click", openCreate);
+    }
+    if (desktopCreateBtn) {
+      desktopCreateBtn.addEventListener("click", openCreate);
+    }
+    closeCreatePost.addEventListener("click", () => {
+      createPost.classList.add("hidden");
+      createPost.classList.remove("flex");
+    });
+  }
+
+  const openSearchBtn = document.getElementById("search-btn");
+  const desktopSearchBtn = document.getElementById("desktop-search-btn");
+  const closeSearchBtn = document.getElementById("close-search-btn");
+  const searchBar = document.getElementById("search-bar");
+
+  if (closeSearchBtn && searchBar) {
+    const openSearch = () => {
+      searchBar.classList.remove("hidden");
+      searchBar.classList.add("flex");
+    };
+
+    if (openSearchBtn) {
+      openSearchBtn.addEventListener("click", openSearch);
+    }
+
+    if (desktopSearchBtn) {
+      desktopSearchBtn.addEventListener("click", openSearch);
+    }
+
+    closeSearchBtn.addEventListener("click", () => {
+      searchBar.classList.add("hidden");
+      searchBar.classList.remove("flex");
+    });
+  }
 });

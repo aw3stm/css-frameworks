@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="bg-brand h-full" lang="en">
+<html class="bg-brand min-h-screen" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
   </head>
-  <body class="text-main-text h-full">
-    <nav class="bg-nav-bg text-main-text relative p-7">
+  <body class="from-bg-top to-bg-bottom min-h-screen text-main-text bg-linear-to-b">
+    <nav class="bg-nav-bg text-main-text relative p-7 shadow-md">
       <div class="mx-auto flex max-w-4xl items-center justify-between">
         <button
           id="mobile-btn"
@@ -95,9 +95,107 @@
       </div>
     </nav>
 
-    <main>
-      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm"></div>
+    <main class="mx-auto w-full max-w-lg px-4 py-6 pb-24">
+      <div class="mb-6 flex items-center gap-6">
+        <div class="shrink-0">
+          <img
+            src="/src/assets/ImageAnna.jpeg"
+            alt="Anna Vestman"
+            class="border-brand-pink h-24 w-24 rounded-full border-2 object-cover shadow-lg"
+          />
+        </div>
+        <div class="flex flex-col text-white">
+          <h1 class="mb-1 text-xl font-bold text-white">awestm</h1>
+          <p class="text-sm font-medium text-white">📚 Frontend Dev Student</p>
+          <p class="text-sm font-medium text-white">🎥 Video Producer</p>
+          <p class="text-sm font-medium text-white">🇸🇪 Stockholm, Sweden</p>
+        </div>
+      </div>
+      <div class="mb-6 flex flex-col gap-3">
+        <button
+          class="bg-brand-pink hover:bg-pink-hover w-full cursor-pointer rounded py-2 font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg focus:ring-2 focus:ring-white/20 focus:outline-none"
+        >
+          Follow
+        </button>
+        <div class="flex gap-3">
+          <div
+            class="bg-input-bg border-input-border text-nav-bg flex-1 rounded border py-2 text-center text-sm font-extrabold shadow-lg"
+          >
+            Followers: 9.8k
+          </div>
+
+          <div
+            class="bg-input-bg border-input-border text-nav-bg flex-1 rounded border py-2 text-center text-sm font-extrabold shadow-lg"
+          >
+            Following: 483
+          </div>
+        </div>
+      </div>
+      <hr class="mb-6 border-white" />
+
+      <div class="grid grid-cols-3 gap-1">
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/frames-for-your-heart-8LYSQnQQ7bM-unsplash.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/frames-for-your-heart-FqqiAvJejto-unsplash.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/frames-for-your-heart-JDBVXignFdA-unsplash.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/stairs.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/sunset.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
+
+        <a
+          href="#"
+          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+          ><img
+            src="/src/assets/wedding.jpg"
+            alt="Post thumbnail"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+        /></a>
       </div>
     </main>
 

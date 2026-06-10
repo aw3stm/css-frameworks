@@ -2,6 +2,8 @@
 
 @theme {
   --color-brand: #8f8b87;
+  --color-bg-top: #8c847e;
+  --color-bg-bottom: #59534e;
   --color-input-bg: #f1f1f1;
   --color-input-border: #cccbc8;
   --text-mobile: 1rem;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="bg-brand min-h-screen" lang="en">
+<html class="bg-bg-brand min-h-screen text-white" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,57 +9,70 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body class="from-bg-top to-bg-bottom min-h-screen text-main-text bg-linear-to-b">
+  <body class="text-main-text relative min-h-screen bg-linear-to-b font-sans">
     <nav class="bg-nav-bg text-main-text relative p-7 shadow-md">
-      <div class="mx-auto flex max-w-4xl items-center justify-between">
-        <button
-          id="mobile-btn"
-          class="z-10 block focus:outline-none md:hidden"
-          aria-label="Toggle menu"
-        >
-          <span class="material-symbols-outlined text-3xl">menu</span>
-        </button>
-        <div class="z-10 ml-auto hidden items-center gap-8 md:flex">
+      <div class="mx-auto flex max-w-6xl items-center justify-between">
+        <div class="z-10 flex items-center gap-8">
+          <button
+            id="mobile-btn"
+            class="z-10 block focus:outline-none md:hidden"
+            aria-label="Toggle menu"
+          >
+            <span class="material-symbols-outlined text-beige-text text-4xl"
+              >menu</span
+            >
+          </button>
+
           <a
             href="/feed/index.html"
-            class="hover:text-brand-pink flex items-center transition-colors"
+            class="bg-bg-sand hover:bg-pink-hover hidden h-12 w-12 items-center justify-center rounded-full shadow-md transition-all hover:scale-105 md:flex"
             aria-label="Feed"
           >
-            <span class="material-symbols-outlined text-4xl">home</span>
+            <span class="material-symbols-outlined text-3xl">home</span>
           </a>
+        </div>
+
+        <div class="z-10 ml-auto hidden items-center gap-8 md:flex">
           <a
             href="/profile/index.html"
-            class="hover:text-brand-pink flex items-center transition-colors"
+            class="bg-brand-pink hover:bg-pink-hover flex h-12 w-12 items-center justify-center rounded-full shadow-md transition-all hover:scale-105"
             aria-label="Profile"
           >
-            <span class="material-symbols-outlined text-4xl">person</span>
+            <span class="material-symbols-outlined text-3xl">person</span>
           </a>
           <button
             id="desktop-search-btn"
-            class="hover:text-brand-pink flex cursor-pointer items-center transition-colors focus:outline-none"
+            class="bg-brand-pink hover:bg-pink-hover flex h-12 w-12 items-center justify-center rounded-full shadow-md transition-all hover:scale-105"
             aria-label="Search"
           >
-            <span class="material-symbols-outlined text-4xl">search</span>
+            <span class="material-symbols-outlined text-3xl">search</span>
           </button>
 
           <button
             id="desktop-create-btn"
-            class="hover:text-brand-pink flex cursor-pointer items-center transition-colors focus:outline-none"
+            class="bg-brand-pink hover:bg-pink-hover flex h-12 w-12 items-center justify-center rounded-full shadow-md transition-all hover:scale-105"
             aria-label="Create Post"
           >
-            <span class="material-symbols-outlined text-4xl">edit_square</span>
+            <span class="material-symbols-outlined text-3xl">edit_square</span>
           </button>
 
           <a
             href="/"
-            class="hover:text-brand-pink flex items-center transition-colors"
+            class="bg-bg-sand hover:bg-pink-hover hidden h-12 w-12 items-center justify-center rounded-full shadow-md transition-all hover:scale-105 md:flex"
             aria-label="Feed"
           >
-            <span class="material-symbols-outlined text-4xl">logout</span>
+            <span class="material-symbols-outlined text-3xl">logout</span>
           </a>
         </div>
       </div>
+
       <a
         href="/feed/index.html"
         class="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
@@ -72,168 +85,152 @@
       </a>
       <div
         id="mobile-menu"
-        class="bg-nav-bg absolute top-full left-4 z-50 mt-2 hidden w-48 flex-col gap-4 rounded-lg p-4 shadow-xl md:hidden"
+        class="bg-nav-bg absolute top-20 left-4 z-50 hidden w-48 flex-col gap-4 rounded-lg p-4 shadow-xl md:hidden"
       >
         <a
           href="/feed/index.html"
-          class="hover:text-brand-pink flex items-center gap-4 transition-colors"
+          class="hover:text-brand-pink text-beige-text flex items-center gap-4 transition-colors"
         >
           <span class="material-symbols-outlined">home</span>Home
         </a>
         <a
           href="/profile/index.html"
-          class="hover:text-brand-pink flex items-center gap-4 transition-colors"
+          class="hover:text-brand-pink text-beige-text flex items-center gap-4 transition-colors"
         >
           <span class="material-symbols-outlined">person</span>Profile
         </a>
         <a
           href="/"
-          class="hover:text-brand-pink flex items-center gap-4 transition-colors"
+          class="hover:text-brand-pink text-beige-text flex items-center gap-4 transition-colors"
         >
           <span class="material-symbols-outlined">logout</span>Log out
         </a>
       </div>
     </nav>
 
-    <main class="mx-auto w-full max-w-lg px-4 py-6 pb-24">
-      <div class="mb-6 flex items-center gap-6">
-        <div class="shrink-0">
-          <img
-            src="/src/assets/ImageAnna.jpeg"
-            alt="Anna Vestman"
-            class="border-brand-pink h-24 w-24 rounded-full border-2 object-cover shadow-lg"
-          />
-        </div>
-        <div class="flex flex-col text-white">
-          <h1 class="mb-1 text-xl font-bold text-white">awestm</h1>
-          <p class="text-sm font-medium text-white">📚 Frontend Dev Student</p>
-          <p class="text-sm font-medium text-white">🎥 Video Producer</p>
-          <p class="text-sm font-medium text-white">🇸🇪 Stockholm, Sweden</p>
-        </div>
-      </div>
-      <div class="mb-6 flex flex-col gap-3">
-        <button
-          class="bg-brand-pink hover:bg-pink-hover w-full cursor-pointer rounded py-2 font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg focus:ring-2 focus:ring-white/20 focus:outline-none"
-        >
-          Follow
-        </button>
-        <div class="flex gap-3">
-          <div
-            class="bg-input-bg border-input-border text-nav-bg flex-1 rounded border py-2 text-center text-sm font-extrabold shadow-lg"
-          >
-            Followers: 9.8k
+    <main class="text-beige-text mx-auto w-full max-w-lg px-4 py-6 pb-24">
+      <div
+        class="space-y-10 md:rounded-4xl md:border md:border-white/10 md:bg-black/10 md:p-8 md:shadow-inner md:backdrop-blur-sm"
+      >
+        <div class="mb-6 flex items-center gap-6">
+          <div class="shrink-0">
+            <img
+              src="/src/assets/ImageAnna.jpeg"
+              alt="Anna Vestman"
+              class="border-brand-pink h-24 w-24 rounded-full border-2 object-cover shadow-lg"
+            />
           </div>
-
-          <div
-            class="bg-input-bg border-input-border text-nav-bg flex-1 rounded border py-2 text-center text-sm font-extrabold shadow-lg"
-          >
-            Following: 483
+          <div class="flex flex-col">
+            <h1 class="mb-1 text-xl font-bold tracking-tight">awestm</h1>
+            <div class="leading-snug">
+              <p class="text-sm font-medium">📚 Frontend Dev Student</p>
+              <p class="text-sm font-medium">🇸🇪 Stockholm, Sweden</p>
+              <p class="text-sm font-medium">🎥 Video Producer</p>
+            </div>
           </div>
         </div>
-      </div>
-      <hr class="mb-6 border-white" />
 
-      <div class="grid grid-cols-3 gap-1">
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/frames-for-your-heart-8LYSQnQQ7bM-unsplash.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+        <div class="mb-6 flex flex-col gap-6">
+          <button
+            class="bg-brand-pink hover:bg-pink-hover w-full rounded-lg py-2.5 font-bold text-white shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg focus:ring-2 focus:ring-white/20 focus:outline-none"
+          >
+            Follow
+          </button>
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/frames-for-your-heart-FqqiAvJejto-unsplash.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+          <div class="flex items-center justify-center gap-12 py-1">
+            <div class="group flex cursor-pointer flex-col items-center">
+              <span
+                class="group-hover:text-brand-pink text-2xl font-bold tracking-tight transition-colors"
+                >9.8k</span
+              >
+              <span
+                class="text-beige-text mt-1 text-[10px] font-medium tracking-widest uppercase"
+                >Followers</span
+              >
+            </div>
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/frames-for-your-heart-JDBVXignFdA-unsplash.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+            <div class="h-10 w-px bg-white/30"></div>
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+            <div class="group flex cursor-pointer flex-col items-center">
+              <span
+                class="group-hover:text-brand-pink text-2xl font-bold tracking-tight transition-colors"
+                >483</span
+              >
+              <span
+                class="text-beige-text mt-1 text-[10px] font-medium tracking-widest uppercase"
+                >Following</span
+              >
+            </div>
+          </div>
+        </div>
+        <hr class="mb-6 border-white" />
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/stairs.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+        <div class="grid grid-cols-3 gap-1">
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/frames-for-your-heart-8LYSQnQQ7bM-unsplash.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/sunset.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/frames-for-your-heart-FqqiAvJejto-unsplash.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
 
-        <a
-          href="#"
-          class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
-          ><img
-            src="/src/assets/wedding.jpg"
-            alt="Post thumbnail"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-        /></a>
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/frames-for-your-heart-JDBVXignFdA-unsplash.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
+
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
+
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/stairs.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
+
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/sunset.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
+
+          <a
+            href="#"
+            class="group block aspect-square overflow-hidden bg-gray-800 transition-opacity hover:opacity-80"
+            ><img
+              src="/src/assets/wedding.jpg"
+              alt="Post thumbnail"
+              class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          /></a>
+        </div>
       </div>
     </main>
-
-    <nav
-      class="bg-nav-bg fixed bottom-0 left-0 z-50 w-full border-t border-white md:hidden"
-    >
-      <div class="flex h-16 items-center justify-around">
-        <a
-          href="/feed/index.html"
-          class="hover:text-brand-pink text-brand-pink flex h-full w-full items-center justify-center transition-colors"
-          aria-label="Home"
-        >
-          <span class="material-symbols-outlined text-3xl">home</span>
-        </a>
-
-        <button
-          id="create-btn"
-          class="hover:text-brand-pink text-brand-pink flex h-full w-full items-center justify-center transition-colors"
-        >
-          <span class="material-symbols-outlined text-3xl">edit_square</span>
-        </button>
-
-        <button
-          id="search-btn"
-          class="hover:text-brand-pink text-brand-pink flex h-full w-full items-center justify-center transition-colors"
-        >
-          <span class="material-symbols-outlined text-3xl">search</span>
-        </button>
-
-        <a
-          href="/profile/index.html"
-          class="hover:text-brand-pink text-brand-pink flex h-full w-full items-center justify-center transition-colors"
-          aria-label="Profile"
-        >
-          <span class="material-symbols-outlined text-3xl">person</span>
-        </a>
-      </div>
-    </nav>
 
     <div
       id="create-post"
@@ -244,36 +241,46 @@
       >
         <button
           id="close-create-post"
-          class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none"
+          class="text-pink-hover hover:text-beige-text absolute top-4 right-4 focus:outline-none"
         >
           <span class="material-symbols-outlined">close</span>
         </button>
-        <h2 class="mb-4 text-xl font-bold text-white">Create New Post</h2>
+        <h2 class="text-beige-text mb-4 text-xl font-bold">Create New Post</h2>
         <form class="space-y-4">
           <div>
-            <label class="mb-1 block text-sm font-medium text-gray-300"
+            <label class="text-beige-text mb-1 block text-sm font-medium"
               >Image URL</label
             >
             <input
               type="url"
               placeholder="https://..."
-              class="bg-input-bg border-input-border focus:border-brand-pink w-full rounded border p-2 text-white outline-none"
+              class="bg-input-bg border-input-border focus:border-brand-pink w-full rounded border p-2 text-gray-500 outline-none"
             />
-
-            <label class="mb-1 block text-sm font-medium text-gray-300"
-              >Caption</label
+          </div>
+          <div>
+            <label class="text-beige-text mb-2 block text-sm font-medium"
+              >Title</label
+            >
+            <textarea
+              rows="1"
+              class="bg-input-bg border-input-border focus:border-brand-pink w-full resize-none rounded border p-2 text-gray-500 outline-none"
+            ></textarea>
+          </div>
+          <div>
+            <label class="text-beige-text mb-2 block text-sm font-medium"
+              >What's on your mind?</label
             >
             <textarea
               rows="3"
-              placeholder="What's on your mind?"
-              class="bg-input-bg border-input-border focus:border-brand-pink w-full resize-none rounded border p-2 text-white outline-none"
+              placeholder="Write here."
+              class="bg-input-bg border-input-border focus:border-brand-pink w-full resize-none rounded border p-2 text-gray-500 outline-none"
             ></textarea>
           </div>
           <button
             type="button"
             class="bg-brand-pink hover:bg-pink-hover w-full rounded p-2 font-semibold text-white transition-colors"
           >
-            Share Post
+            Post
           </button>
         </form>
       </div>
@@ -288,11 +295,11 @@
       >
         <button
           id="close-search-btn"
-          class="text-pink-hover absolute top-4 right-4 hover:text-white focus:outline-none"
+          class="text-pink-hover hover:text-beige-text absolute top-4 right-4 focus:outline-none"
         >
           <span class="material-symbols-outlined">close</span>
         </button>
-        <h2 class="mb-4 text-xl font-bold text-white">Search posts</h2>
+        <h2 class="text-beige-text mb-4 text-xl font-bold">Search posts</h2>
         <div class="space-y-4">
           <div class="relative">
             <span
@@ -302,12 +309,12 @@
             <input
               type="text"
               placeholder="Search users or posts"
-              class="bg-input-bg border-input-border focus:border-brand-pink w-full rounded border py-2 pr-3 pl-10 text-black outline-none"
+              class="bg-input-bg border-input-border focus:border-brand-pink w-full rounded border py-2 pr-3 pl-10 text-gray-400 outline-none"
             />
           </div>
 
           <div>
-            <label class="mb-1 block text-sm font-medium text-gray-300"
+            <label class="text-beige-text mb-1 block text-sm font-medium"
               >Sort by</label
             >
             <select
@@ -326,6 +333,48 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <nav
+      class="bg-nav-bg fixed bottom-0 left-0 z-50 w-full border-t border-white md:hidden"
+    >
+      <div class="flex h-16 items-center justify-around">
+        <a
+          href="/feed/index.html"
+          class="hover:text-brand-pink text-beige-text flex h-full w-full items-center justify-center transition-colors"
+          aria-label="Home"
+        >
+          <span class="material-symbols-outlined text-3xl">home</span>
+        </a>
+
+        <button
+          id="create-btn"
+          class="hover:text-brand-pink text-beige-text flex h-full w-full items-center justify-center transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">edit_square</span>
+        </button>
+
+        <button
+          id="search-btn"
+          class="hover:text-brand-pink text-beige-text flex h-full w-full items-center justify-center transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">search</span>
+        </button>
+
+        <a
+          href="/profile/index.html"
+          class="hover:text-brand-pink text-beige-text flex h-full w-full items-center justify-center transition-colors"
+          aria-label="Profile"
+        >
+          <span class="material-symbols-outlined text-3xl">person</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="absolute bottom-6 left-0 w-full text-center">
+      <p class="text-sm font-medium text-gray-400">
+        Copyright &copy; 2026 Vibely
+      </p>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>

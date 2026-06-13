@@ -80,4 +80,19 @@ document.addEventListener("DOMContentLoaded", () => {
       searchBar.classList.remove("flex");
     });
   }
+
+  const passwordInput = document.getElementById("reg-password");
+  const confirmInput = document.getElementById("reg-password-twice");
+
+  if (passwordInput && confirmInput) {
+    confirmInput.addEventListener("input", () => {
+      if (confirmInput.value !== passwordInput.value) {
+        confirmInput.setCustomValidity(
+          "Passwords do not match, please try again.",
+        );
+      } else {
+        confirmInput.setCustomValidity("");
+      }
+    });
+  }
 });

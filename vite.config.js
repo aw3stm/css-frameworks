@@ -2,8 +2,8 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig({
-  base: '/css-frameworks/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/css-frameworks/' : '/',
   plugins: [tailwindcss()],
   build: {
     rollupOptions: {
@@ -14,4 +14,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

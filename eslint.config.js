@@ -11,6 +11,7 @@ export default [
         window: 'readonly',
         console: 'readonly',
         process: 'readonly',
+        __dirname: 'readonly',
       },
     },
     rules: {

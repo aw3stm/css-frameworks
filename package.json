@@ -5,15 +5,36 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e-ui": "playwright test --ui",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.60.0",
     "@tailwindcss/cli": "^4.3.0",
-    "prettier": "^3.8.3",
+    "@types/node": "^25.9.3",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.4",
     "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.3.0",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "vitest": "^4.1.8"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{html,css,json}": [
+      "prettier --write"
+    ]
   },
   "description": "",
   "main": "index.js",

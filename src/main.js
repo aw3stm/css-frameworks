@@ -1,97 +1,113 @@
-import "./style.css";
+import './style.css';
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
+  const loginForm = document.getElementById('login-form');
+  const registerForm = document.getElementById('register-form');
+
+  if (loginForm) {
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = './feed/index.html';
+    });
+  }
+
+  if (registerForm) {
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = './feed/index.html';
+    });
+  }
   // ======================================
   // AUTHENTICATION for login and register
   // ======================================
-  const loginSection = document.getElementById("login-section");
-  const registerSection = document.getElementById("register-section");
-  const showRegBtn = document.getElementById("show-register-btn");
-  const showLoginBtn = document.getElementById("show-login-btn");
+  const loginSection = document.getElementById('login-section');
+  const registerSection = document.getElementById('register-section');
+  const showRegBtn = document.getElementById('show-register-btn');
+  const showLoginBtn = document.getElementById('show-login-btn');
 
   if (showRegBtn && showLoginBtn) {
-    showRegBtn.addEventListener("click", () => {
-      loginSection.classList.add("hidden");
-      registerSection.classList.remove("hidden");
+    showRegBtn.addEventListener('click', () => {
+      loginSection.classList.add('hidden');
+      registerSection.classList.remove('hidden');
     });
-    showLoginBtn.addEventListener("click", () => {
-      registerSection.classList.add("hidden");
-      loginSection.classList.remove("hidden");
+    showLoginBtn.addEventListener('click', () => {
+      registerSection.classList.add('hidden');
+      loginSection.classList.remove('hidden');
     });
   }
   // ======================================
   // MOBILE MENU
   // ======================================
-  const mobileBtn = document.getElementById("mobile-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileBtn = document.getElementById('mobile-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
   if (mobileBtn && mobileMenu) {
-    mobileBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-      mobileMenu.classList.toggle("flex");
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
     });
   }
   // ========================================
   // CREATE POST
   // ========================================
-  const createBtn = document.getElementById("create-btn");
-  const desktopCreateBtn = document.getElementById("desktop-create-btn");
-  const closeCreatePost = document.getElementById("close-create-post");
-  const createPost = document.getElementById("create-post");
+  const createBtn = document.getElementById('create-btn');
+  const desktopCreateBtn = document.getElementById('desktop-create-btn');
+  const closeCreatePost = document.getElementById('close-create-post');
+  const createPost = document.getElementById('create-post');
 
   if (closeCreatePost && createPost) {
     const openCreate = () => {
-      createPost.classList.remove("hidden");
-      createPost.classList.add("flex");
+      createPost.classList.remove('hidden');
+      createPost.classList.add('flex');
     };
     if (createBtn) {
-      createBtn.addEventListener("click", openCreate);
+      createBtn.addEventListener('click', openCreate);
     }
     if (desktopCreateBtn) {
-      desktopCreateBtn.addEventListener("click", openCreate);
+      desktopCreateBtn.addEventListener('click', openCreate);
     }
-    closeCreatePost.addEventListener("click", () => {
-      createPost.classList.add("hidden");
-      createPost.classList.remove("flex");
+    closeCreatePost.addEventListener('click', () => {
+      createPost.classList.add('hidden');
+      createPost.classList.remove('flex');
     });
   }
 
-  const openSearchBtn = document.getElementById("search-btn");
-  const desktopSearchBtn = document.getElementById("desktop-search-btn");
-  const closeSearchBtn = document.getElementById("close-search-btn");
-  const searchBar = document.getElementById("search-bar");
+  const openSearchBtn = document.getElementById('search-btn');
+  const desktopSearchBtn = document.getElementById('desktop-search-btn');
+  const closeSearchBtn = document.getElementById('close-search-btn');
+  const searchBar = document.getElementById('search-bar');
 
   if (closeSearchBtn && searchBar) {
     const openSearch = () => {
-      searchBar.classList.remove("hidden");
-      searchBar.classList.add("flex");
+      searchBar.classList.remove('hidden');
+      searchBar.classList.add('flex');
     };
 
     if (openSearchBtn) {
-      openSearchBtn.addEventListener("click", openSearch);
+      openSearchBtn.addEventListener('click', openSearch);
     }
 
     if (desktopSearchBtn) {
-      desktopSearchBtn.addEventListener("click", openSearch);
+      desktopSearchBtn.addEventListener('click', openSearch);
     }
 
-    closeSearchBtn.addEventListener("click", () => {
-      searchBar.classList.add("hidden");
-      searchBar.classList.remove("flex");
+    closeSearchBtn.addEventListener('click', () => {
+      searchBar.classList.add('hidden');
+      searchBar.classList.remove('flex');
     });
   }
 
-  const passwordInput = document.getElementById("reg-password");
-  const confirmInput = document.getElementById("reg-password-twice");
+  const passwordInput = document.getElementById('reg-password');
+  const confirmInput = document.getElementById('reg-password-twice');
 
   if (passwordInput && confirmInput) {
-    confirmInput.addEventListener("input", () => {
+    confirmInput.addEventListener('input', () => {
       if (confirmInput.value !== passwordInput.value) {
         confirmInput.setCustomValidity(
-          "Passwords do not match, please try again.",
+          'Passwords do not match, please try again.'
         );
       } else {
-        confirmInput.setCustomValidity("");
+        confirmInput.setCustomValidity('');
       }
     });
   }
